@@ -18,12 +18,16 @@ Navigate to the root of the project and run:
 npm install
 ```
 
-## Running the app 
-
-Let's start the app.
+## Starting the app 
 
 ```sh
 ng serve
 ```
 
-You can see the app on localhost:4200.
+You can see the it on localhost:4200.
+
+## Libraries
+
+* [Angular](https://angular.io/) for the main framework.
+* [Angular CLI](https://cli.angular.io/) for the command line interface.
+* [Gsap](https://greensock.com/gsap) for animations.
