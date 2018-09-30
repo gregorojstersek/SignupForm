@@ -1,20 +1,139 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<form class="form" [formGroup]="signupForm">
 
+  <h1>Sign Up</h1>
+
+  <div *ngIf="step === 1">
+    <div class="form__group">
+      <input type="text" name="first_name" id="first_name" class="form__input" formControlName="firstName" [ngClass]="{'active': signupForm.get('firstName').value.length}">
+      <label for="first_name" class="form__label">First name</label>
+      <span class="form__invalid">Invalid</span>
+      <div class="slider-bottom"></div>
+    </div>
+
+    <div class="form__group">
+      <input type="text" name="last_name" id="last_name" class="form__input" formControlName="lastName" [ngClass]="{'active': signupForm.get('lastName').value.length}">
+      <label for="last_name" class="form__label">Last name</label>
+      <span class="form__invalid">Invalid</span>
+      <div class="slider-bottom"></div>
+    </div>
+
+    <div class="form__group">
+      <input type="email" name="email" id="email" class="form__input" formControlName="email" [ngClass]="{'active': signupForm.get('email').value.length}"
+        required>
+      <label for="email" class="form__label">Email address</label>
+      <span class="form__invalid">Invalid</span>
+      <div class="slider-bottom"></div>
+    </div>
+
+    <div class="form__group">
+      <input type="password" name="password" id="password" class="form__input" formControlName="password" [ngClass]="{'active': signupForm.get('password').value.length}"
+        required>
+      <label for="password" class="form__label">Password</label>
+      <span class="form__invalid">Invalid</span>
+      <div class="slider-bottom"></div>
+    </div>
+
+    <h2>Favorites</h2>
+
+
+    <div class="form__group form__group--big">
+      <p for="favoriteColor">What's your favorite color?</p>
+      <div class="form__radio-group">
+        <input type="radio" value="red" class="form__radio" id="fav_red" name="favoriteColor" formControlName="favoriteColor" (change)="changeBg()">
+        <label for="fav_red" class="form__radio-label red"></label>
+      </div>
+
+      <div class="form__radio-group">
+        <input type="radio" value="orange" class="form__radio" id="fav_orange" name="favoriteColor" formControlName="favoriteColor"
+          (change)="changeBg()">
+        <label for="fav_yellow" class="form__radio-label orange"></label>
+      </div>
+
+      <div class="form__radio-group">
+        <input type="radio" value="yellow" class="form__radio" id="fav_yellow" name="favoriteColor" formControlName="favoriteColor"
+          (change)="changeBg()">
+        <label for="fav_yellow" class="form__radio-label yellow"></label>
+      </div>
+
+      <div class="form__radio-group">
+        <input type="radio" value="green" class="form__radio" id="fav_green" name="favoriteColor" formControlName="favoriteColor"
+          (change)="changeBg()">
+        <label for="fav_green" class="form__radio-label green"></label>
+      </div>
+
+      <div class="form__radio-group">
+        <input type="radio" value="blue" class="form__radio" id="fav_blue" name="favoriteColor" formControlName="favoriteColor" (change)="changeBg()">
+        <label for="fav_blue" class="form__radio-label blue"></label>
+      </div>
+
+      <div class="form__radio-group">
+        <input type="radio" value="purple" class="form__radio" id="fav_purple" name="favoriteColor" formControlName="favoriteColor"
+          (change)="changeBg()">
+        <label for="fav_purple" class="form__radio-label purple"></label>
+      </div>
+
+    </div>
+
+    <img src="/assets/donatello.png" class="tmnt-image" id="donnie-img" />
+    <img src="/assets/leonardo.png" class="tmnt-image" id="leo-img" />
+    <img src="/assets/michelangelo.png" class="tmnt-image" id="mikey-img" />
+    <img src="/assets/raphael.png" class="tmnt-image" id="raph-img" />
+
+    <div class="form__group form__group--big">
+      <p>What's your favorite Ninja Turtle?</p>
+      <div class="form__radio-group form__radio-group--bigger">
+        <input type="radio" value="leo" class="form__radio form__radio--bigger" id="leo" name="favoriteNinjaTurtle" formControlName="favoriteNinjaTurtle"
+          (change)="tmntAnim()">
+        <label for="leo" class="form__radio-label tmnt leo"></label>
+        <span class="form__radio-text">leo</span>
+      </div>
+
+      <div class="form__radio-group form__radio-group--bigger">
+        <input type="radio" value="mikey" class="form__radio form__radio--bigger" id="mikey" name="favoriteNinjaTurtle" formControlName="favoriteNinjaTurtle"
+          (change)="tmntAnim()">
+        <label for="fav_yellow" class="form__radio-label tmnt mikey"></label>
+        <span class="form__radio-text">mikey</span>
+      </div>
+
+      <div class="form__radio-group form__radio-group--bigger">
+        <input type="radio" value="donnie" class="form__radio form__radio--bigger" id="donnie" name="favoriteNinjaTurtle" formControlName="favoriteNinjaTurtle"
+          (change)="tmntAnim()">
+        <label for="fav_yellow" class="form__radio-label tmnt donnie"></label>
+        <span class="form__radio-text">donnie</span>
+      </div>
+
+      <div class="form__radio-group form__radio-group--bigger">
+        <input type="radio" value="raph" class="form__radio form__radio--bigger" id="raph" name="favoriteNinjaTurtle" formControlName="favoriteNinjaTurtle"
+          (change)="tmntAnim()">
+        <label for="fav_green" class="form__radio-label tmnt raph"></label>
+        <span class="form__radio-text">raph</span>
+      </div>
+
+    </div>
+
+    <div class="form__group margin-top-25">
+      <div class="form__checkbox-group">
+        <input type="checkbox" id="amazing" name="amazing" formControlName="amazing" class="form__checkbox">
+        <span class="form__checkbox-label"></span>
+        <label for="amazing"> I'm amazing</label>
+      </div>
+      <img src="/assets/youre-perfect.gif" class="gif" id="perfect-gif" *ngIf="signupForm.get('amazing').value" />
+    </div>
+
+    <div class="form__group">
+      <span class="form__cta" (click)="processForm()">Signup</span>
+      <p *ngIf="showErrorMsg" class="red">Please fill in your Email and Password.</p>
+    </div>
+
+  </div>
+
+  <div *ngIf="step === 2">
+    <h2 class="white">Thanks for signing up!</h2>
+  </div>
+
+</form>
+
+
+
+<!-- <p>Form value: {{ signupForm.value | json }}</p>
+<p>Form status: {{ signupForm.status | json }}</p> -->

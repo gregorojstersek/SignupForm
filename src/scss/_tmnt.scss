@@ -1,0 +1,13 @@
+.tmnt-image {
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  z-index: 2;
+  opacity: 0;
+  top: 1500px;
+
+  @media all and (max-width: 768px) {
+    left: 0;
+    width: 100%;
+  }
+}

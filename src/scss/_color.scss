@@ -1,0 +1,118 @@
+.red {
+
+  h1,
+  h2 {
+    color: $red;
+  }
+
+  .slider-bottom,
+  .form__checkbox:checked+span:before,
+  .form__cta {
+    background-color: $red;
+  }
+
+  .form__input:focus~.form__label,
+  .form__input.active~.form__label {
+    color: $red;
+  }
+}
+
+.yellow {
+
+  h1,
+  h2 {
+    color: $yellow;
+  }
+
+  .slider-bottom,
+  .form__checkbox:checked+span:before,
+  .form__cta {
+    background-color: $yellow;
+  }
+
+  .form__input:focus~.form__label,
+  .form__input.active~.form__label {
+    color: $yellow;
+  }
+
+  .form__cta {
+    color: $gray;
+  }
+}
+
+.blue {
+
+  h1,
+  h2 {
+    color: $blue;
+  }
+
+  .slider-bottom,
+  .form__checkbox:checked+span:before,
+  .form__cta {
+    background-color: $blue;
+  }
+
+  .form__input:focus~.form__label,
+  .form__input.active~.form__label,
+    {
+    color: $blue;
+  }
+}
+
+.green {
+
+  h1,
+  h2 {
+    color: $green;
+  }
+
+  .slider-bottom,
+  .form__checkbox:checked+span:before,
+  .form__cta {
+    background-color: $green;
+  }
+
+  .form__input:focus~.form__label,
+  .form__input.active~.form__label {
+    color: $green;
+  }
+}
+
+.purple {
+
+  h1,
+  h2 {
+    color: $purple;
+  }
+
+  .slider-bottom,
+  .form__checkbox:checked+span:before,
+  .form__cta {
+    background-color: $purple;
+  }
+
+  .form__input:focus~.form__label,
+  .form__input.active~.form__label {
+    color: $purple;
+  }
+}
+
+.orange {
+
+  h1,
+  h2 {
+    color: $orange;
+  }
+
+  .slider-bottom,
+  .form__checkbox:checked+span:before,
+  .form__cta {
+    background-color: $orange;
+  }
+
+  .form__input:focus~.form__label,
+  .form__input.active~.form__label {
+    color: $orange;
+  }
+}

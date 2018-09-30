@@ -1,27 +1,29 @@
-# Signup
+# Signup form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+The form is made with Angular's reactive technique - Reactive Forms. For animation purposes the GSAP library is included to complement events, like selecting a favorite Ninja Turtle. 
 
-## Development server
+The end result of the form is outputed to the console after the completition.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This can easily be a starting point for creating real forms with Angular.
 
-## Code scaffolding
+## Preview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![alt text](https://user-images.githubusercontent.com/9784551/46257497-f0efab00-c4ba-11e8-835f-62d0610fad95.gif)
 
-## Build
+## Install 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Navigate to the root of the project and run:
 
-## Running unit tests
+```sh
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running the app 
 
-## Running end-to-end tests
+Let's start the app.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+ng serve
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can see the app on localhost:4200.
