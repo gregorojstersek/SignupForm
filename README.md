@@ -30,4 +30,4 @@ You can see the it on localhost:4200.
 
 * [Angular](https://angular.io/) for the main framework.
 * [Angular CLI](https://cli.angular.io/) for the command line interface.
-* [Gsap](https://greensock.com/gsap) for animations.
+* [GSAP](https://greensock.com/gsap) for animations.
